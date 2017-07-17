@@ -21,6 +21,10 @@
                 <span class="done-{{task.done}}">{{task.body}}</span>
             </li>
         </ul>
+        <form ng-submit="addNew()">
+            <input type="text" ng-model="newTaskBody">
+            <input type="submit" value="add">
+        </form>
     </div>
 </body>
 </html>

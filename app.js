@@ -6,4 +6,9 @@ angular.module('myapp', [])
             { 'body': 'do this 3', 'done': true},
             { 'body': 'do this 4', 'done': false},
         ];
+
+        $scope.addNew = function() {
+            $scope.tasks.push({'body': $scope.newTaskBody, 'done': false});
+            $scope.newTaskBody = '';
+        }
     }]);

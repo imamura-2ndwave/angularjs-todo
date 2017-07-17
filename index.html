@@ -15,7 +15,10 @@
 <body>
     <h1>Todo list</h1>
     <div ng-controller="MainController">
-        <p>Finished Task: {{ getDoneCount() }} / {{ tasks.length }}</p>
+        <p>
+            Finished Task: {{ getDoneCount() }} / {{ tasks.length }}
+            <button ng-click="deleteDone()">Delete Finished Done</button>
+        </p>
         <ul>
             <li ng-repeat="task in tasks">
                 <input type="checkbox" ng-model="task.done">

@@ -21,4 +21,14 @@ angular.module('myapp', [])
 
             return count;
         }
+
+        $scope.deleteDone = function() {
+            var oldTasks = $scope.tasks;
+            $scope.tasks = [];
+            angular.forEach(oldTasks, function(task) {
+                if (!task.done) {
+                    $scope.tasks.push(task);
+                }
+            })
+        }
     }]);

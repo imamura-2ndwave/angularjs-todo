@@ -11,4 +11,14 @@ angular.module('myapp', [])
             $scope.tasks.push({'body': $scope.newTaskBody, 'done': false});
             $scope.newTaskBody = '';
         }
+
+        $scope.getDoneCount = function() {
+            var count = 0;
+
+            angular.forEach($scope.tasks, function(task) {
+                count += task.done ? 1 : 0;
+            });
+
+            return count;
+        }
     }]);
